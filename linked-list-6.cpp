@@ -38,12 +38,13 @@ int main ()
 
     cout << "existing linked list is:";
     display (head);
+    cout <<endl;
 
 // insert a middle ;
 
-    Node*newNode =new Node (25);
-
-    third->next=newNode;
+    Node*temp=third;
+    second->next=NULL;
+    delete temp;
 
 
 
@@ -51,6 +52,8 @@ int main ()
     cout << "Update linked list is:";
 
     display (head);
+    cout <<endl;
+
 
     return 0;
 
