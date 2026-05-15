@@ -11,20 +11,27 @@ int main ()
     {
         cin>>arr[i];
     }
- for (int i=1; i<n; i++)
- {
-     int key=arr[i];
-     int j=i-1;
-     while (j>=0 && arr[j]>key )
+for (int i=0; i<n-1; i++)
+{
 
-     {
-         arr[j+1] =arr[j];
+int min =i;
+for (int j=i+1; j<n; j++)
+{
+    if (arr[j]< arr[min])
+    {
+        min=j;
 
-         j--;
-     }
-     arr[j+1]=key;
- }
- cout <<endl;
+    }
+}
+int temp=arr[i];
+arr[i]=arr[min];
+arr[min]=temp;
+
+
+
+
+}
+cout <<endl;
  cout << "sorted array is:";
  for (int i=0; i<n; i++)
  {
